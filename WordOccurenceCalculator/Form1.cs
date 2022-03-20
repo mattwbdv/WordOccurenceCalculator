@@ -25,9 +25,17 @@ namespace WordOccurenceCalculator
         private void button1_Click(object sender, EventArgs e)
         {
             // take the text in textbox, split it into a list of words
-            // pass it to WordCalculator
-            // display the result list of the WordOccurrence list in the label
+            // Get the string from the textbox 
+            String raw = textBox.Text;
+            List<string> list = new List<string> { };
 
+            list = raw.Split(' ').ToList();
+
+            // pass it to WordCalculator
+            String answer = WordCalculator.CalculateOccurrences(list);
+
+            // display the result list of the WordOccurrence list in the label
+            form_result.Text = answer;
         }
     }
 }
