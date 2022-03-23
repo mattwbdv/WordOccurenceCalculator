@@ -42,6 +42,7 @@ namespace WordOccurenceCalculator
             foreach(var key in wordDict.Keys)
             {
                 builder.Append(wordDict[key].Word);
+                builder.Append(" - ");
                 builder.Append(wordDict[key].Count);
                 builder.Append("\n");
 
